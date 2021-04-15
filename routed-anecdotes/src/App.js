@@ -84,6 +84,10 @@ const CreateNew = (props) => {
       info,
       votes: 0
     })
+    props.setNotification(`a new anecdote ${content} created!`)
+    setTimeout(() => {
+      props.setNotification(null)
+    }, 10000)
     setContent('')
     setAuthor('')
     setInfo('')
@@ -131,7 +135,7 @@ const App = () => {
     }
   ])
 
-  const [notification, setNotification] = useState('')
+  const [notification, setNotification] = useState(null)
 
   const addNew = (anecdote) => {
     anecdote.id = (Math.random() * 10000).toFixed(0)
@@ -164,13 +168,17 @@ const App = () => {
       <div>
         <h1>Software anecdotes</h1>
         <Menu />
+        {notification
+          ? <div>{notification}</div>
+          : null
+        }
 
         <Switch>
           <Route path="/anecdotes/:id">
             <Anecdote anecdotes={anecdotes} />
           </Route>
           <Route path="/create">
-            <CreateNew addNew={addNew} />
+            <CreateNew addNew={addNew} setNotification={setNotification} />
           </Route>
           <Route path="/about">
             <About />
