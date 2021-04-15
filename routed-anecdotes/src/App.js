@@ -89,16 +89,20 @@ const CreateNew = (props) => {
     setTimeout(() => {
       props.setNotification(null)
     }, 10000)
-    content.clear()
-    author.clear()
-    info.clear()
+    resetInputFields()
     history.push('/')
+  }
+
+  const resetInputFields = () => {
+    content.reset()
+    author.reset()
+    info.reset()
   }
 
   return (
     <div>
       <h2>create a new anecdote</h2>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit} onReset={resetInputFields} >
         <div>
           content
           <input
@@ -123,7 +127,8 @@ const CreateNew = (props) => {
             onChange={(e)=> info.onChange(e)}
           />
         </div>
-        <button>create</button>
+        <button type="submit">create</button>
+        <button type="reset">reset</button>
       </form>
     </div>
   )
