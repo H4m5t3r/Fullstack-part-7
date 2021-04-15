@@ -11,10 +11,19 @@ export const useField = (type) => {
     setValue('')
   }
 
+  const formInputMode = () => {
+    return {
+        type,
+        value,
+        onChange
+    }
+  }
+
   return {
     type,
     value,
     onChange,
-    reset
+    reset,
+    formInputMode
   }
 }

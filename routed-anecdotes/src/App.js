@@ -105,27 +105,15 @@ const CreateNew = (props) => {
       <form onSubmit={handleSubmit} onReset={resetInputFields} >
         <div>
           content
-          <input
-            name={content.type}
-            value={content.value}
-            onChange={(e) => content.onChange(e)}
-          />
+          <input{...content.formInputMode()}/>
         </div>
         <div>
           author
-          <input
-            name={author.type}
-            value={author.value}
-            onChange={(e) => author.onChange(e)}
-          />
+          <input{...author.formInputMode()}/>
         </div>
         <div>
           url for more info
-          <input
-            name={info.type}
-            value={info.value}
-            onChange={(e)=> info.onChange(e)}
-          />
+          <input{...info.formInputMode()}/>
         </div>
         <button type="submit">create</button>
         <button type="reset">reset</button>
