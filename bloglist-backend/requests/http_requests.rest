@@ -1,0 +1,157 @@
+
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "VS Code Guide",
+    "author": "TheHamster",
+    "url": "www.vscodeguides.com",
+    "likes": 4
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "author": "TheHamster",
+    "likes": 4
+}
+
+###
+DELETE http://localhost:3003/api/blogs/6066f79564c51931145532bc
+
+###
+PUT http://localhost:3003/api/blogs/6066e8482e7e3b20abe7d2b9
+Content-Type: application/json
+
+{
+    "title": "VS Code Guide",
+    "author": "TheHamster",
+    "url": "www.vscodeguides.com",
+    "likes": 7
+}
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "alongCameZeus777",
+    "name": "Brunhilde",
+    "password": "superSecret"
+}
+
+###
+DELETE http://localhost:3003/api/users/60671e5e1c43a91f8a546309
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "hi",
+    "name": "EpicMadam",
+    "password": "superSecret"
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "GreenTube",
+    "name": "suppamaaio",
+    "password": ""
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "GreenTube",
+    "name": "suppamaaio",
+    "password": "ja"
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "blogs": [],
+    "username": "alongCameZeus777",
+    "name": "Brunhilde",
+    "password": "superSecret"
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "blogs": [],
+    "username": "hopladopla5462",
+    "name": "Harald",
+    "password": "superSecret"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "VS Code Guide",
+    "author": "TheHamster",
+    "url": "www.vscodeguides.com",
+    "likes": 4,
+    "userId": "606ada6afa67a7035428475f"
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "alongCameZeus777",
+    "password": "superSecret"
+}
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "hopladopla5462",
+    "password": "superSecret"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvcGxhZG9wbGE1NDYyIiwiaWQiOiI2MDZhZGE2Y2ZhNjdhNzAzNTQyODQ3NjAiLCJpYXQiOjE2MTc3OTQ5MjB9.Q3CawMPTBYK297yhSYgNMfG3sckx3FcwYNqckHT7LUk
+
+{
+    "title": "VS Code Guide",
+    "author": "TheHamster",
+    "url": "www.vscodeguides.com",
+    "likes": 4,
+    "userId": "606ada6afa67a7035428475f"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/606b13bd0c23236c9e1e734a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsb25nQ2FtZVpldXM3NzciLCJpZCI6IjYwNmFkYTZhZmE2N2E3MDM1NDI4NDc1ZiIsImlhdCI6MTYxNzYyOTkxOX0.mv8-T93G4HWNplizk3KWa-C0u4ED2jUyL92P3XmSHBA
